@@ -1,0 +1,26 @@
+use strict;
+use warnings;
+
+&init();
+
+sub init {
+	&inter();
+}
+
+sub inter {
+	my %QUIT = map {$_ => 1} ("exit", "quit", "GTFO", "1");
+	
+	printf "hello\n";
+	printf "this is the game called life\n";
+	
+	my $answer;
+	while (1) {
+		$answer = <STDIN>;
+		chop($answer);
+		print "your answer is $answer\n";
+		if ($QUIT{$answer}) {
+			print "EXITING\n";
+			last;
+		}
+	}
+}

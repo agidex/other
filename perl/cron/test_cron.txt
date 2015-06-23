@@ -1,0 +1,4 @@
+SHELL=/bin/bash
+
+25 16 * * * perl /home/alex/programming/myscript1.pl
+25 16 * * * perl /home/alex/programming/myscript2.pl
